@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iService_Admin.Views.AppointmentPage"
+             BackgroundImageSource="pattern.svg">
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20">
+        <Frame
+            BackgroundColor="#1e1e1e"
+            BorderColor="Black">
+            <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Frame
+                    BackgroundColor="#111111"
+                    BorderColor="#111111"
+                    Margin="0,5,0,10">
+                    <Label
+                        Text="Appointment Details"
+                        TextColor="White"
+                        FontSize="25"
+                        HorizontalOptions="Center"></Label>
+                </Frame>
+                <Label
+                    Margin="0,10,0,0"
+                    Text="Car"
+                    TextColor="White"
+                    FontSize="22"></Label>
+                <Label
+                    x:Name="CarName"
+                    TextColor="#C8C8C8"
+                    FontSize="20"></Label>
+
+                <Label
+                    Margin="0,10,0,0"
+                    Text="Type"
+                    TextColor="White"
+                    FontSize="22"></Label>
+                <Label
+                    x:Name="Type"
+                    TextColor="#C8C8C8"
+                    FontSize="20"></Label>
+
+                <Label
+                    Margin="0,10,0,0"
+                    Text="Notes"
+                    TextColor="White"
+                    FontSize="22"></Label>
+                <Label
+                    x:Name="Notes"
+                    TextColor="#C8C8C8"
+                    FontSize="20"></Label>
+
+                <Label
+                    Margin="0,10,0,0"
+                    Text="Date"
+                    TextColor="White"
+                    FontSize="22"></Label>
+                <Label
+                    x:Name="Date"
+                    TextColor="#C8C8C8"
+                    FontSize="20"></Label>
+
+                <Label
+                    Margin="0,10,0,0"
+                    Text="Client Name"
+                    TextColor="White"
+                    FontSize="22"></Label>
+                <Label
+                    x:Name="ClientName"
+                    TextColor="#C8C8C8"
+                    FontSize="20"></Label>
+
+                <Label
+                    Margin="0,10,0,0"
+                    Text="Email"
+                    TextColor="White"
+                    FontSize="22"></Label>
+                <Label
+                    x:Name="ClientEmail"
+                    TextColor="#C8C8C8"
+                    FontSize="20"></Label>
+            </StackLayout>
+        </Frame>
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Margin="0,20,0,0"
+            Spacing="30">
+            <Button
+                x:Name="ContactBtn"
+                Text="Contact"
+                BorderColor="#8B9A46" BorderWidth="1"
+                WidthRequest="160" HeightRequest="55"
+                FontSize="20"
+                Clicked="ContactBtn_OnClicked"/>
+            <Button
+                x:Name="CanacelBtn"
+                Text="Cancel"
+                BorderColor="#8B9A46" BorderWidth="1"
+                WidthRequest="160" HeightRequest="55"
+                TextColor="IndianRed"
+                FontSize="20"
+                Clicked="CanacelBtn_OnClicked"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

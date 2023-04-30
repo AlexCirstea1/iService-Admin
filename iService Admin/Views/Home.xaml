@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iService_Admin.Views.Home"
+             BackgroundImageSource="pattern.svg">
+    <StackLayout>
+        <Label 
+            x:Name="ShopNameLabel"
+            TextColor="White"
+            FontSize="40"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontFamily="DESIGNER"
+            Padding="30"/>
+
+        <Frame
+            BackgroundColor="#111111"
+            Margin="10"
+            BorderColor="#111111">
+            <ListView
+                Refreshing="AppointmentsListView_OnRefreshing"
+                RefreshAllowed="True"
+                x:Name="AppointmentsListView"
+                SeparatorVisibility="Default"
+                SeparatorColor="White"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="True"
+                ItemTapped="AppointmentsListView_OnItemTapped"
+                RefreshControlColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid Margin="20">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Car: " TextColor="White" Margin="0,0,0,10"></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding CarName}" TextColor="White" Margin="0,0,0,10"></Label>
+
+                                    <Label Grid.Row="1" Grid.Column="0" Text="Type: " TextColor="White" Margin="0,0,0,10"></Label>
+                                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding AppointmentType}" TextColor="White" Margin="0,0,0,10"></Label>
+
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Date: " TextColor="White" Margin="0,0,0,10"></Label>
+                                    <Label Grid.Column="1" Grid.Row="2" Text="{Binding AppointmentDate}" TextColor="White" Margin="0,0,0,10"></Label>
+
+                                    <Label Grid.Row="3" Grid.Column="0" Text="Client: " TextColor="White" Margin="0,0,0,10"></Label>
+                                    <Label Grid.Column="1" Grid.Row="3" Text="{Binding Client}" TextColor="White" Margin="0,0,0,10"></Label>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Frame>
+    </StackLayout>
+</ContentPage>
