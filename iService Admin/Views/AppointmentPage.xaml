@@ -6,25 +6,25 @@
     <VerticalStackLayout
         VerticalOptions="Center"
         HorizontalOptions="Center"
-        Padding="20">
+        Padding="20"
+        Spacing="20">
         <Frame
-            BackgroundColor="#1e1e1e"
+            BackgroundColor="#111111"
+            BorderColor="#111111">
+            <Label
+                Text="Appointment Details"
+                TextColor="White"
+                FontSize="25"
+                HorizontalOptions="Center"></Label>
+        </Frame>
+        <Frame
+            BackgroundColor="#88444444"
             BorderColor="Black">
             <StackLayout
                 VerticalOptions="Center"
                 HorizontalOptions="Center">
-                <Frame
-                    BackgroundColor="#111111"
-                    BorderColor="#111111"
-                    Margin="0,5,0,10">
-                    <Label
-                        Text="Appointment Details"
-                        TextColor="White"
-                        FontSize="25"
-                        HorizontalOptions="Center"></Label>
-                </Frame>
                 <Label
-                    Margin="0,10,0,0"
+                    Margin="0,0,0,0"
                     Text="Car"
                     TextColor="White"
                     FontSize="22"></Label>
@@ -82,27 +82,56 @@
                     x:Name="ClientEmail"
                     TextColor="#C8C8C8"
                     FontSize="20"></Label>
+
+                <Label
+                    Margin="0,10,0,0"
+                    Text="Confirmed"
+                    TextColor="White"
+                    FontSize="22"></Label>
+                <Label
+                    x:Name="isConfirmed"
+                    TextColor="#C8C8C8"
+                    FontSize="20"></Label>
             </StackLayout>
         </Frame>
-        <HorizontalStackLayout
+        <Grid
+            x:Name="grid"
             HorizontalOptions="Center"
-            Margin="0,20,0,0"
-            Spacing="30">
+            ColumnSpacing="30"
+            RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
             <Button
+                Grid.Row="0"
+                Grid.Column="0"
                 x:Name="ContactBtn"
                 Text="Contact"
                 BorderColor="#8B9A46" BorderWidth="1"
-                WidthRequest="160" HeightRequest="55"
                 FontSize="20"
                 Clicked="ContactBtn_OnClicked"/>
             <Button
-                x:Name="CanacelBtn"
-                Text="Cancel"
+                Grid.Row="0"
+                Grid.Column="1"
+                x:Name="ConfirmBtn"
+                Text="Confirm"
                 BorderColor="#8B9A46" BorderWidth="1"
-                WidthRequest="160" HeightRequest="55"
+                FontSize="20"
+                Clicked="ConfirmBtn_OnClicked"/>
+            <Button
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                x:Name="CanacelBtn"
+                Text="Cancel Appointment"
+                BorderColor="IndianRed" BorderWidth="1"
                 TextColor="IndianRed"
                 FontSize="20"
                 Clicked="CanacelBtn_OnClicked"/>
-        </HorizontalStackLayout>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

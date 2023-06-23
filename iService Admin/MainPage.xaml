@@ -41,7 +41,7 @@
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0" Text="Don't have an account?" FontSize="Small" VerticalOptions="Center" TextColor="White"/>
-            <Button Grid.Column="1" Text="Register here" Clicked="Button_OnClicked"  FontSize="Small" BackgroundColor="Transparent" TextColor="#8B9A46" BorderColor="#8B9A46" BorderWidth="0" />
+            <Button Grid.Column="1" Text="Register here" Clicked="Button_OnClicked"  FontSize="Small" BackgroundColor="Transparent" TextColor="#00bfff" BorderColor="#00bfff" BorderWidth="0" />
         </Grid>
 
 

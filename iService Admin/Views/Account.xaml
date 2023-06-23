@@ -16,14 +16,14 @@
             </Grid.RowDefinitions>
 
             <!-- User profile section -->
-            <StackLayout Grid.Row="0" Padding="10">
+            <StackLayout Grid.Row="0" Padding="30" Margin="0,20,0,40">
                 <!-- Profile picture -->
-                <Frame HeightRequest="120" WidthRequest="120"
-                   CornerRadius="60"
-                   VerticalOptions="Center" HorizontalOptions="Center" Margin="120,0,120,0" BorderColor="#00bfff">
-                    <Image Source="avatar.png"
-                       HeightRequest="120" WidthRequest="120"
-                       Aspect="AspectFill">
+                <Frame HeightRequest="90" WidthRequest="60"
+                   
+                   VerticalOptions="Center" HorizontalOptions="Center" BorderColor="#00bfff">
+                    <Image x:Name="ServiceLogo"
+                       HeightRequest="160" WidthRequest="160"
+                       Aspect="AspectFit">
                     </Image>
                 </Frame>
 
@@ -33,33 +33,33 @@
                 x:Name="usernameLabel"
                 Text="shop_name" FontAttributes="Bold" FontSize="Large"
                    VerticalOptions="Center" HorizontalOptions="Center"
-                   Margin="0,5,0,0" TextColor="White"/>
+                   Margin="0,15,0,0" TextColor="White"/>
             </StackLayout>
 
 
             <!-- Reset password button -->
             <Button Grid.Row="1" Text="Reset Password" Margin="10"
                 BackgroundColor="#111111" TextColor="White" 
-                BorderWidth="1" BorderColor="#00bfff" 
+                BorderWidth="1" BorderColor="#8B9A46" 
                 FontSize="16"
                 CornerRadius="5" 
                 Clicked="ResetPasswordBtn"/>
 
             <!-- Favorite Service button -->
-            <Button Grid.Row="2" Text="Button 2" Margin="10"
+            <Button Grid.Row="2" Text="History" Margin="10"
                 BackgroundColor="#111111" TextColor="White" 
-                BorderWidth="1" BorderColor="#00bfff" 
+                BorderWidth="1" BorderColor="#8B9A46" 
                 FontSize="16"
                 CornerRadius="5" />
 
             <!-- Favorite Service button -->
-            <Button Grid.Row="3" Text="History" Margin="10"
+            <Button Grid.Row="3" Text="Contact" Margin="10"
                     BackgroundColor="#111111" TextColor="White" 
-                    BorderWidth="1" BorderColor="#00bfff" 
+                    BorderWidth="1" BorderColor="#8B9A46" 
                     FontSize="16"
                     CornerRadius="5" />
 
-        <!-- Other settings section -->
+        <!-- Other settings section --><!--
             <Grid Grid.Row="4" Padding="15">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -70,24 +70,24 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <!-- Settings item 1 -->
+                --><!-- Settings item 1 --><!--
                 <Label Grid.Row="0" Grid.Column="0" Text="Subscribe to Newsletter" TextColor="White" FontSize="19"
                    VerticalOptions="Center" HorizontalOptions="Start" />
                 <Switch x:Name="Switch1"
                     Toggled="Switch1_OnToggled"
-                    Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" ThumbColor="#8B9A46" OnColor="WhiteSmoke"/>
+                    Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" ThumbColor="#00bfff" OnColor="WhiteSmoke"/>
 
-                <!-- Settings item 2 -->
+                --><!-- Settings item 2 --><!--
                 <Label Grid.Row="1" Grid.Column="0" Text="Push Notifications" FontSize="19" TextColor="White"
                    VerticalOptions="Center" HorizontalOptions="Start" />
-                <Switch Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" ThumbColor="#8B9A46" OnColor="WhiteSmoke"/>
-            </Grid>
+            <Switch Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" ThumbColor="#00bfff" OnColor="WhiteSmoke"/>
+            </Grid>-->
 
 
             <!-- Log out button -->
             <Button Grid.Row="5" Text="Log Out" Margin="10"
-                BackgroundColor="#8B9A46" TextColor="White" 
-                BorderWidth="1" BorderColor="#8B9A46" 
+                BackgroundColor="#00bfff" TextColor="White" 
+                BorderWidth="1" BorderColor="#00bfff" 
                 CornerRadius="5"
                 FontSize="19" FontFamily="coolvetica"
                 Clicked="LogOutButton_OnClickedButton_Clicked"/>

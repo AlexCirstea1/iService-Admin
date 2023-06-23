@@ -11,6 +11,9 @@
         <Tab Title="Home" Icon="home_icon.png">
             <ShellContent ContentTemplate="{DataTemplate local:Home}"/>
         </Tab>
+        <Tab Title="Calendar" Icon="calendar.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:CalendarPage}"/>
+        </Tab>
         <Tab Title="Account" Icon="account.svg">
             <ShellContent ContentTemplate="{DataTemplate local:Account}"/>
         </Tab>

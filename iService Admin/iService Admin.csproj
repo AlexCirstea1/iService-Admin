@@ -52,13 +52,16 @@
 	  <None Remove="Resources\Fonts\coolvetica.otf" />
 	  <None Remove="Resources\Fonts\DESIGNER.otf" />
 	  <None Remove="Resources\Images\account.svg" />
+	  <None Remove="Resources\Images\calendar.svg" />
 	  <None Remove="Resources\Images\home_icon.png" />
 	  <None Remove="Resources\Images\pattern.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Syncfusion.Maui.Calendar" Version="21.2.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -68,7 +71,13 @@
 	  <MauiXaml Update="Views\AppointmentPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CalendarPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Home.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Statistics.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,44 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="iService_Admin.Views.Home"
-             BackgroundImageSource="pattern.svg">
-    <StackLayout>
-        <!--<Label 
-            x:Name="ShopNameLabel"
-            TextColor="White"
-            FontSize="40"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            FontFamily="DESIGNER"
-            Padding="30"/>-->
+             x:Class="iService_Admin.Views.CalendarPage"
+             BackgroundImageSource="pattern.svg"
+             xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
 
-        <Frame
-            Margin="20"
-            BackgroundColor="#333333"
-            BorderColor="#1e1e1e">
-            <StackLayout>
-                <Image x:Name="ServiceLogo" Margin="20" MaximumHeightRequest="60" WidthRequest="300" Aspect="AspectFit"></Image>
-            </StackLayout>
+    <StackLayout
+        Padding="20"
+        Spacing="30">
+        <Frame IsVisible="True" x:Name="frame" Background="#E1E1E1" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
+            <calendar:SfCalendar
+                ShowTrailingAndLeadingDates="False"
+                BackgroundColor="#E1E1E1"
+                TodayHighlightBrush="#8B9A46"
+                StartRangeSelectionBackground="#8B9A46"
+                Tapped="SfCalendar_OnTapped"
+                HeightRequest="290">
+            </calendar:SfCalendar>
         </Frame>
-        
-        <Frame
-            BackgroundColor="#111111"
-            Margin="10"
-            BorderColor="#111111">
+        <Frame IsVisible="True" BorderColor="#212121" Background="#212121" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
             <ListView
-                IsPullToRefreshEnabled="True"
-                Header="Appointments to confirm:"
-                Refreshing="AppointmentsListView_OnRefreshing"
                 RefreshAllowed="True"
                 x:Name="AppointmentsListView"
                 SeparatorVisibility="Default"
                 SeparatorColor="White"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="True"
-                ItemTapped="AppointmentsListView_OnItemTapped"
                 RefreshControlColor="White"
-                MaximumHeightRequest="500">
+                HeightRequest="330"
+                ItemTapped="AppointmentsListView_OnItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -78,4 +68,5 @@
             </ListView>
         </Frame>
     </StackLayout>
+    
 </ContentPage>

@@ -16,6 +16,7 @@
         public string? AppointmentNotes { get; set; }
 
         public int ServiceId { get; set; }
+        public bool isConfirmed { get; set; }
 
         public virtual Car Car { get; set; } = null!;
 
